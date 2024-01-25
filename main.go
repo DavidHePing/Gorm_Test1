@@ -13,6 +13,10 @@ type Car struct {
 	Name string
 }
 
+func (Car) TableName() string {
+	return "CCar"
+}
+
 func main() {
 	connect_string := "host=localhost user=admin password=1234 dbname=testDb port=5432"
 	db, err := gorm.Open(postgres.Open(connect_string), &gorm.Config{
