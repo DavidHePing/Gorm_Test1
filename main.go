@@ -20,7 +20,7 @@ func main() {
 	db, err := gorm.Open(postgres.Open(connect_string), &gorm.Config{
 		//show all sql
 		Logger: logger.Default.LogMode(logger.Info),
-		// DryRun: true,
+		DryRun: true,
 	})
 
 	if err != nil {
@@ -43,7 +43,7 @@ func select_test1(db *gorm.DB) {
 func insert_test1(db *gorm.DB) {
 	users := []*User{}
 
-	for i := 0; i < 10000; i++ {
+	for i := 0; i < 10; i++ {
 		users = append(users, &User{
 			Name:     strconv.Itoa(i),
 			Age:      10,
@@ -51,5 +51,8 @@ func insert_test1(db *gorm.DB) {
 		})
 	}
 
-	db.Create(users)
+	// result := db.Create(users)
+	// result := db.Select("Name", "Age", "Birthday").Create(users)
+	result := db.Omit("Id", "Birthday").Create(users)
+	fmt.Println(result)
 }
