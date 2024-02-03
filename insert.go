@@ -1,6 +1,7 @@
 package main
 
 import (
+	"Gorm_Test1/model"
 	"fmt"
 	"strconv"
 	"time"
@@ -9,10 +10,10 @@ import (
 )
 
 func insert_test1(db *gorm.DB) {
-	users := []*User{}
+	users := []*model.User{}
 
 	for i := 0; i < 30; i++ {
-		users = append(users, &User{
+		users = append(users, &model.User{
 			Name:     strconv.Itoa(i),
 			Age:      10,
 			Birthday: time.Date(2000, time.July, i%31, 0, 0, 0, 0, time.UTC),
@@ -34,7 +35,7 @@ func insert_test1(db *gorm.DB) {
 }
 
 func insert_map(db *gorm.DB) {
-	result := db.Model(&User{}).Create([]map[string]interface{}{
+	result := db.Model(&model.User{}).Create([]map[string]interface{}{
 		{"Name": "jinzhu_1", "Age": 18},
 		{"Name": "jinzhu_2", "Age": 20},
 	}).Statement
