@@ -29,7 +29,8 @@ func main() {
 	}
 
 	// select_test1(db)
-	insert_test1(db)
+	// insert_test1(db)
+	insert_map(db)
 }
 
 func select_test1(db *gorm.DB) {
@@ -64,4 +65,13 @@ func insert_test1(db *gorm.DB) {
 	result = db.Omit("Id").CreateInBatches(users, 10).Statement
 
 	fmt.Println(result)
+}
+
+func insert_map(db *gorm.DB) {
+	result := db.Model(&User{}).Create([]map[string]interface{}{
+		{"Name": "jinzhu_1", "Age": 18},
+		{"Name": "jinzhu_2", "Age": 20},
+	}).Statement
+
+	fmt.Println(result.Statement)
 }
