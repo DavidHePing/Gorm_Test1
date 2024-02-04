@@ -27,6 +27,7 @@ func select_test1(db *gorm.DB) {
 
 func select_with_id(db *gorm.DB) {
 	var cars []model.Car
-	db.Find(&cars, 1)
+	result := db.Find(&cars, 1)
 	fmt.Println(cars)
+	fmt.Println(result.Error)
 }
