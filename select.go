@@ -24,3 +24,9 @@ func select_test1(db *gorm.DB) {
 	db.Find(&cars)
 	fmt.Println(cars)
 }
+
+func select_with_id(db *gorm.DB) {
+	var cars []model.Car
+	db.Find(&cars, 1)
+	fmt.Println(cars)
+}

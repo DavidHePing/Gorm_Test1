@@ -21,7 +21,8 @@ func main() {
 		fmt.Println("Failed!!!!!")
 	}
 
-	select_test1(db)
 	// insert_test1(db)
 	// insert_map(db)
+	// select_test1(db)
+	select_with_id(db)
 }
