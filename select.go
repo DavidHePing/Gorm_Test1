@@ -18,4 +18,9 @@ func select_test1(db *gorm.DB) {
 	map1 := map[string]interface{}{}
 	db.Model(&model.Car{}).First(&map1)
 	fmt.Print(map1)
+
+	var cars []model.Car
+
+	db.Find(&cars)
+	fmt.Println(cars)
 }
