@@ -31,3 +31,18 @@ func select_with_id(db *gorm.DB) {
 	fmt.Println(cars)
 	fmt.Println(result.Error)
 }
+
+func select_where_test1(db *gorm.DB) {
+	var cars []model.Car
+
+	result := db.Where("name = ?", "Tesla").Find(&cars)
+	fmt.Println(cars)
+
+	result = db.Where("price >= ?", 200).Find(&cars)
+	result = db.Where("price >= ?", "200").Find(&cars)
+	if result.Error != nil {
+		fmt.Println("sql failed", result.Error)
+	}
+
+	fmt.Println(cars)
+}
