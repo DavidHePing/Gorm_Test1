@@ -27,5 +27,7 @@ func main() {
 	// select_test1(db)
 	// select_with_id(db)
 	// select_where_test1(db)
-	select_where_and_test1(db)
+	// select_where_and_test1(db)
+	// select_count_test1(db)
+	select_raw_sql_test1(db)
 }
