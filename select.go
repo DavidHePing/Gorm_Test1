@@ -46,3 +46,13 @@ func select_where_test1(db *gorm.DB) {
 
 	fmt.Println(cars)
 }
+
+func select_where_and_test1(db *gorm.DB) {
+	var cars []model.Car
+
+	db.Where("name = ?", "Tesla").Or("price >= ?", 200).Find(&cars)
+	fmt.Println(cars)
+
+	db.Where("name = ? AND price >= ?", "Tesla", 200).Find(&cars)
+	fmt.Println(cars)
+}
