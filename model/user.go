@@ -12,7 +12,7 @@ type User struct {
 	Age          int
 	Birthday     time.Time
 	RandomNumber int
-	Tasks        []Task
+	Tasks        []Task `gorm:"foreignKey:UserId"`
 }
 
 func (User) TableName() string {
