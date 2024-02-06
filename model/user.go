@@ -12,6 +12,7 @@ type User struct {
 	Age          int
 	Birthday     time.Time
 	RandomNumber int
+	Tasks        []Task
 }
 
 func (User) TableName() string {
