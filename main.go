@@ -31,5 +31,5 @@ func main() {
 	// select_count_test1(db)
 	// select_raw_sql_test1(db)
 	// select_limit_offset_test1(db)
-	select_join_test1(db)
+	select_preload_test1(db)
 }

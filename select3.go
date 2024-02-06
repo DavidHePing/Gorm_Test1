@@ -7,7 +7,7 @@ import (
 	"gorm.io/gorm"
 )
 
-func select_join_test1(db *gorm.DB) {
+func select_preload_test1(db *gorm.DB) {
 	var users []model.User
 
 	result := db.Preload("Tasks").Omit("random_number").Where("id in ?", []int{1, 2}).Find(&users)
