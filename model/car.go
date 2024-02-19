@@ -9,7 +9,7 @@ import (
 type Car struct {
 	Id        int `gorm:"primaryKey"`
 	Name      string
-	Price     int
+	Price     float64
 	UpdatedAt time.Time
 }
 
