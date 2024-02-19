@@ -32,5 +32,7 @@ func main() {
 	// select_raw_sql_test1(db)
 	// select_limit_offset_test1(db)
 	// select_preload_test1(db)
-	select_preload_test2(db)
+	// select_preload_test2(db)
+	// save_test1(db)
+	udpate_test1(db)
 }
