@@ -11,6 +11,7 @@ type Car struct {
 	Name      string
 	Price     float64
 	UpdatedAt time.Time
+	Type      string
 }
 
 func (car *Car) BeforeUpdate(db *gorm.DB) {

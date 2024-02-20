@@ -34,5 +34,6 @@ func main() {
 	// select_preload_test1(db)
 	// select_preload_test2(db)
 	// save_test1(db)
-	udpate_test1(db)
+	// udpate_test1(db)
+	udpate_test2(db)
 }
