@@ -7,11 +7,11 @@ import (
 )
 
 type Car struct {
-	Id        int `gorm:"primaryKey"`
-	Name      string
-	Price     float64
-	UpdatedAt time.Time
-	Type      string
+	gorm.Model
+	Id    int `gorm:"primaryKey"`
+	Name  string
+	Price float64
+	Type  string
 }
 
 func (car *Car) BeforeUpdate(db *gorm.DB) {
