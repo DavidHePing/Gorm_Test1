@@ -38,5 +38,9 @@ func main() {
 	// udpate_test2(db)
 	// delete_test1(db)
 
-	test_car2(db)
+	////raw sql
+	raw_select_test1(db)
+
+	////car2
+	// test_car2(db)
 }
