@@ -24,7 +24,7 @@ func main() {
 	// insert_test1(db)
 	// insert_map(db)
 
-	select_test1(db)
+	// select_test1(db)
 	// select_with_id(db)
 	// select_where_test1(db)
 	// select_where_and_test1(db)
@@ -36,5 +36,7 @@ func main() {
 	// save_test1(db)
 	// udpate_test1(db)
 	// udpate_test2(db)
-	delete_test1(db)
+	// delete_test1(db)
+
+	test_car2(db)
 }
