@@ -33,13 +33,18 @@ func main() {
 	// select_limit_offset_test1(db)
 	// select_preload_test1(db)
 	// select_preload_test2(db)
+
 	// save_test1(db)
 	// udpate_test1(db)
 	// udpate_test2(db)
+
 	// delete_test1(db)
 
+	// select_many_test1(db)
+	select_many_test2(db)
+
 	////raw sql
-	raw_select_test1(db)
+	// raw_select_test1(db)
 
 	////car2
 	// test_car2(db)
