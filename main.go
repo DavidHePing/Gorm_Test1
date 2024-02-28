@@ -41,7 +41,9 @@ func main() {
 	// delete_test1(db)
 
 	// select_many_test1(db)
-	select_many_test2(db)
+	// select_many_test2(db)
+
+	chain_test1(db)
 
 	////raw sql
 	// raw_select_test1(db)
