@@ -15,6 +15,8 @@ func main() {
 		Logger: logger.Default.LogMode(logger.Info),
 		//not do only show sql
 		// DryRun: true,
+		//skip transaction, performance 30% up!
+		SkipDefaultTransaction: true,
 	})
 
 	if err != nil {
