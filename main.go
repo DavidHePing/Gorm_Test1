@@ -40,7 +40,8 @@ func main() {
 	// udpate_test1(db)
 	// udpate_test2(db)
 	// update_where_Test1(db)
-	update_where_Test2(db)
+	// update_where_Test2(db)
+	update_where_Test3(db)
 
 	// delete_test1(db)
 
