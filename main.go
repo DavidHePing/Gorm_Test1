@@ -39,13 +39,15 @@ func main() {
 	// save_test1(db)
 	// udpate_test1(db)
 	// udpate_test2(db)
+	// update_where_Test1(db)
+	update_where_Test2(db)
 
 	// delete_test1(db)
 
 	// select_many_test1(db)
 	// select_many_test2(db)
 
-	chain_test1(db)
+	// chain_test1(db)
 
 	////raw sql
 	// raw_select_test1(db)
