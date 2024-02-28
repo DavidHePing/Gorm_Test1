@@ -23,5 +23,7 @@ func update_where_Test2(db *gorm.DB) {
 }
 
 func update_where_Test3(db *gorm.DB) {
-	db.Model(&model.Car{}).Where("name = ?", "Toyota").Update("price", gorm.Expr("price + ?", 10))
+	result := db.Model(&model.Car{}).Where("name = ?", "Toyota").Update("price", gorm.Expr("price + ?", 10))
+
+	fmt.Println(result)
 }
